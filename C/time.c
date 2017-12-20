@@ -11,18 +11,15 @@ int main()
 	{
 	    res[i]=(hr[i]*60)+mins[i];
 	}
-	for(i=0;i<2;i++)
+	if(res[1]>res[0])
 	{
-	if(res[i+1]>res[i])
-	{
-	    diff=res[i+1]-res[i];
-	    printf("%d\n",diff);
+	    diff=res[1]-res[0];
+	    printf("%d mins\n",diff);
 	}
 	else
 	{
-	    diff=res[i]-res[i+1];
-	    printf("%d\n",diff);
-	}
+	    diff=res[0]-res[1];
+	    printf("%d mins\n",diff);
 	}
 	hour=diff/60;
 	min=diff%60;
