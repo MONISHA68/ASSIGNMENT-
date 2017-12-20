@@ -1,29 +1,38 @@
 #include<stdio.h>
 #include<string.h>
-#define V 5;
-#define X 10;
-#define I 1;
-#define D 500;
-#define C 100;
-int main() {
-	char roman[30];
-	char ch[100];
-	int n,temp=0,i;
-	scanf("%s",roman);
-	n=strlen(roman);
+int main()
+{
+    char roman[10],a[10];
+    int n,i,j,sum=0;
+    scanf("%s",roman);
+    n=strlen(roman);
     for(i=0;i<n;i++)
     {
-        if(roman[i]<roman[i+1])
+        if(roman[i]=='I')
         {
-            temp=temp+(roman[i+1]-roman[i]);
-            
+            a[i]=1;
         }
-        else if(roman[i]>=roman[i+1])
+        else if(roman[i]=='V')
         {
-             temp=temp+(roman[i]+roman[i+1]);
+            a[i]=5;
         }
-      
+        else
+        {
+            a[i]=10;
+        }
     }
-    printf("%d",temp);
-	return 0;
+    sum=a[n-1];
+    for(i=(n-1);i>0;i--)
+    {
+        if(a[i]>a[i-1])
+        {
+            sum=sum-a[i-1];
+        }
+        else 
+        {
+            sum=sum+a[i-1];
+        }
+    }
+    printf("%d",sum);
+    return 0;
 }
