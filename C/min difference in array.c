@@ -21,7 +21,7 @@ int main()
 	       }
 	       if(diff<=min)
 	       {
-	           diff=min;
+	           min=diff;
 	           x=a[i];
 	           y=a[j];
 	       }
