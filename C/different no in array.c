@@ -19,7 +19,7 @@ int main()
 	        {
 	            printf("%d",a[i]);
 	             break;
-	        } break;
+	        } 
 	    }
 	 }
 	 for(i=0;i<n;i++)
