@@ -9,7 +9,14 @@ public class Weightofstr
 		int sum=0;
 		for(int i=0;i<n;i++)
 		{
-			sum=sum+(int)ch[i]-96;
+			if(ch[i]>='0' && ch[i]<='9')
+			{
+				sum=sum+(int)ch[i]-48;
+			}
+			else
+			{
+				sum=sum+(int)ch[i]-96;
+			}
 		}
 		return sum;
 	}
@@ -18,7 +25,11 @@ public class Weightofstr
 		int sum=0;
 		for(int i=0;i<n;i++)
 		{
-			if(!(ch[i]=='a'||ch[i]=='e'|| ch[i]=='i'|ch[i]=='o'||ch[i]=='u'))
+			if(ch[i]>='0' && ch[i]<='9')
+			{
+				sum=sum+(int)ch[i]-48;
+			}
+			else if(!(ch[i]=='a'||ch[i]=='e'|| ch[i]=='i'|ch[i]=='o'||ch[i]=='u'))
 			{
 				sum=sum+(int)ch[i]-96;
 			}
