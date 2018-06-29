@@ -13,37 +13,37 @@ public class Currencycount
 			{
 				n=n-1000;
 				count++;
-				//continue;
+				continue;
 			}
 			if(n>=500) 
 			{
 				n=n-500;
 				count++;
-				//continue;
+				continue;
 			}
 			if(n>=100) 
 			{
 				n=n-100;
 				count++;
-				//continue;
+				continue;
 			}
 			if(n>=50) 
 			{
 				n=n-50;
 				count++;
-				//continue;
+				continue;
 			}
 			if(n>=10) 
 			{
 				n=n-10;
 				count++;
-				//continue;
+				continue;
 			}
 			if(n>=1) 
 			{
 				n=n-1;
 				count++;
-				//continue;
+				continue;
 			}
 		}
 		return count;
