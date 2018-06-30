@@ -24,10 +24,19 @@ public class Oddevensum
 				while(sum%2!=0)
 				{
 					i++;
-					sum=sum+a[i];
+					if(i==n1)
+					{
+						break;
+					}
+					else
+					{
+						sum=sum+a[i];
+					}
 				}
-				System.out.print(sum+" ");
-				sum=0;
+				if(sum%2==0)
+				{
+					System.out.print(sum+" ");
+				}
 			}
 			else
 			{
@@ -36,10 +45,19 @@ public class Oddevensum
 				while(sum%2==0)
 				{
 					i++;
-					sum=sum+a[i];
+					if(i==n1)
+					{
+						break;
+					}
+					else
+					{
+						sum=sum+a[i];
+					}
 				}
-				System.out.print(sum+" ");
-				sum=0;
+				if(sum%2!=0)
+				{
+					System.out.print(sum+" ");
+				}
 			}
 		}
 		sc.close();
