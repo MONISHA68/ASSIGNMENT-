@@ -38,5 +38,7 @@ public class Patterncomplex {
 			System.out.println();
 		}
 		sc.close();
+		
+		////for space can use (n-i)*2
 	}
 }
