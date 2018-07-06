@@ -1,10 +1,9 @@
-package day7.java;
-
+package player.java;
 import java.util.Scanner;
+public class Playersequence {
 
-public class Playermaxsum {
 
-	public static void main(String[] args)
+public static void main(String[] args)
 	{
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
@@ -15,20 +14,18 @@ public class Playermaxsum {
 		}
 		int p=sc.nextInt();
 		char[] ch=String.valueOf(p).toCharArray();
-		int k=0,x=0;
-		char max='0';
-		char[] a=new char[n];
+		int k=0,x=0,y=0,sum=0,max=0,flag=0;
+		int[] a=new int[n];
 		for(int i=0;i<n;i++)
 		{
-			max=ch[i];
+			sum=(int)ch[i]-48;
 			for(int j=i+n;j<ch.length;j+=n)
 			{
-				if(max<=ch[j])
-				{
-					max=ch[j];
-				}
+				sum=sum+(int)ch[j]-48;
 			}
-			a[k++]=max;
+			//System.out.println(sum);
+			a[k++]=sum;
+			sum=0;
 		}
 		max=a[0];
 		for(int i=1;i<k;i++)
@@ -38,8 +35,20 @@ public class Playermaxsum {
 				max=a[i];
 				x=i;
 			}
+			else if(max==a[i])
+			{
+				flag=1;
+				y=i;
+			}
 		}
-		System.out.println(str[x]+" : "+Character.getNumericValue(max));
+		if(flag==0)
+		{
+			System.out.println(str[x]+" : "+max);
+		}
+		else
+		{
+			System.out.println(str[x]+" : "+max+"\n"+str[y]+" : "+max);
+		}
 		sc.close();
 	}
 }
