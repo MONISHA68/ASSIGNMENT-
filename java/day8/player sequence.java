@@ -1,16 +1,14 @@
 package day8.java;
 
 import java.util.Scanner;
-import java.util.Arrays;
-public class Playersequence {
-
-	public static void main(String[] args) {
+public class Playersequence
+{
+	public static void main(String[] args) 
+	{
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
 		String[] str=new String[n];
 		int[] a=new int[n];
-		//int[] b=new int[n];
-		//Arrays.fill(b,0);
 		int t=0;
 		String temp="";
 		for(int i=0;i<n;i++)
@@ -20,7 +18,6 @@ public class Playersequence {
 		for(int i=0;i<n;i++)
 		{
 			a[i]=sc.nextInt();
-			//b[i]=i;
 		}
 		for(int i=0;i<n-1;i++)
 		{
